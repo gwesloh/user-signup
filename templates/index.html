@@ -3,7 +3,7 @@
 
 <h2>User-Signup</h2>
 <form action="/signup" method="post">
-    <p><label>Username<input type="text" name="username" value="{{username}}"/></label>
+    <p><label>Username<input type="text" name="username" value= {{username}}/></label>
     {% with username_errors = get_flashed_messages(category_filter=["username_error"]) %}
     {% if username_errors %}
       <ul>
@@ -17,7 +17,7 @@
     </p>
 
 
-    <p><label>Password<input type="text" name="password"/></label>
+    <p><label>Password<input type="password" name="password"/></label>
     {% with password_errors = get_flashed_messages(category_filter=["password_error"]) %}
     {% if password_errors %}
       <ul>
@@ -31,7 +31,7 @@
     </p>
 
 
-    <p><label>Verify Password<input type="text" name="verify"/></label>
+    <p><label>Verify Password<input type="password" name="verify"/></label>
     {% with verify_errors = get_flashed_messages(category_filter=["verify_error"]) %}
     {% if verify_errors %}
       <ul>
@@ -45,7 +45,7 @@
     </p>
 
 
-    <p><label>Email<input type="text" name="email" value="{{email}}" /></label>
+    <p><label>Email<input type="text" name="email" value= {{email}} /></label>
     {% with email_errors = get_flashed_messages(category_filter=["email_error"]) %}
     {% if email_errors %}
       <ul>
