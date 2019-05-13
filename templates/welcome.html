@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+from main import user
+username= request.form['username']
+{% block content %}
+<p>
+     Welcome, {{username}}!
+</p>
+{% endblock %}
