@@ -66,7 +66,7 @@ def signup():
             is_error= True
 
         if is_error:
-            return render_template('index.html')
+            return render_template('index.html', username= username, email= email)
         else:
             user = User(email=email, password=password, username=username )
             session['user'] = user.username
